@@ -1,0 +1,35 @@
+# Photos. fix_dji_geo.py reads .jpg and .JPG only. Do not commit images.
+*.jpg
+*.jpeg
+*.JPG
+*.JPEG
+*.tif
+*.tiff
+*.TIF
+*.TIFF
+*.dng
+*.DNG
+*.heic
+*.HEIC
+
+# geo.txt outputs
+geo.txt
+*.geo.txt
+
+# EXIF / XMP dumps
+*.xmp
+*.exif.json
+raw_xmp.json
+shots.csv
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
