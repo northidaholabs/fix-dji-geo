@@ -33,3 +33,8 @@ venv/
 Thumbs.db
 .idea/
 .vscode/
+
+# Coverage
+.coverage
+.coverage.*
+htmlcov/

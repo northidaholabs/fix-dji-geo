@@ -1,0 +1,15 @@
+# Coverage for fix_dji_geo.py, counting the copies of it that
+# tests/test_cli.py starts in a subprocess. Needs coverage 7.10 or later.
+#
+#   python3 -m coverage run -m unittest discover -s tests
+#   python3 -m coverage combine
+#   python3 -m coverage report
+[run]
+source = .
+omit = tests/*
+parallel = true
+patch = subprocess
+
+[report]
+show_missing = true
+fail_under = 95
