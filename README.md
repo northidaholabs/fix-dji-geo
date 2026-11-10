@@ -197,10 +197,21 @@ python3 -m unittest discover -s tests -v
 python3 fix_dji_geo.py --help
 ```
 
+Coverage needs `coverage` 7.10 or later (`python3 -m pip install "coverage>=7.10"`).
+`.coveragerc` also counts the copies of the script that `tests/test_cli.py`
+starts in a subprocess. The report fails below 95%.
+
+```bash
+python3 -m coverage run -m unittest discover -s tests
+python3 -m coverage combine
+python3 -m coverage report
+```
+
 | Test | What it checks |
 |---|---|
 | `tests/test_shift.py` | 1 m north and 1 m east, the east step uses the updated latitude, sign, zero lag, pad plus `RelativeAltitude`, longitude-then-latitude order, missing tags, `AbsoluteAltitude` ignored |
 | `tests/test_cli.py` | `--help`, usage errors, a missing folder, a missing `exiftool`, and `geo.txt` from fake ExifTool JSON |
+| `tests/test_edges.py` | number parsing, skip reasons, duplicates, ExifTool failures with `subprocess.run` replaced, output path errors, a broken pipe |
 
 A missing folder, or a `PATH` with no `exiftool`, exits `1` and names the problem on stderr. Stdout stays empty, and the photo folder is not written to.
 

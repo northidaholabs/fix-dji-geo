@@ -110,7 +110,10 @@ def parse_number(value: object) -> float:
     if isinstance(value, bool) or value is None:
         raise ValueError("not a single number")
     if isinstance(value, (int, float)):
-        number = float(value)
+        try:
+            number = float(value)
+        except OverflowError:
+            raise ValueError("not a finite number") from None
     elif isinstance(value, str):
         stripped = value.strip()
         if not stripped:
@@ -136,7 +139,9 @@ def fix_photo(
     source = record.get("SourceFile", "")
     if not isinstance(source, str):
         source = str(source)
-    name = photo_name(source) or "(unknown file)"
+    name = photo_name(source)
+    if not name:
+        return None, "skipped (unknown file): the exiftool record has no SourceFile"
 
     if any(ch.isspace() for ch in name):
         return None, f"skipped {name}: filename contains whitespace"

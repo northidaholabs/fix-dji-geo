@@ -15,5 +15,11 @@ jobs:
           python-version: "3.12"
       - name: Syntax check
         run: python3 -m py_compile fix_dji_geo.py
-      - name: Unit tests
-        run: python3 -m unittest discover -s tests -v
+      - name: Install coverage
+        run: python3 -m pip install "coverage>=7.10"
+      - name: Unit tests with coverage
+        run: python3 -m coverage run -m unittest discover -s tests -v
+      - name: Coverage report
+        run: |
+          python3 -m coverage combine
+          python3 -m coverage report
