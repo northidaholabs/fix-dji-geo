@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 North Idaho Labs, LLC
+# SPDX-License-Identifier: AGPL-3.0-or-later
 """Lat/lon shift tests with made-up numbers. No photos and no flight data."""
 
 import math

@@ -217,6 +217,11 @@ A missing folder, or a `PATH` with no `exiftool`, exits `1` and names the proble
 
 ## License
 
-MIT. Copyright (c) 2026 North Idaho Labs, LLC. See [LICENSE](LICENSE).
+[![License: AGPL-3.0-or-later](https://img.shields.io/badge/License-AGPL--3.0--or--later-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 
-This tool comes from [North Idaho Labs](https://northidaholabs.com).
+GNU Affero General Public License, version 3 or later (SPDX identifier `AGPL-3.0-or-later`).
+Copyright (c) 2026 North Idaho Labs, LLC. See [LICENSE](LICENSE).
+
+Versions released before this change remain under the MIT License.
+
+Commercial licenses are available from [North Idaho Labs](https://northidaholabs.com).
