@@ -1,5 +1,5 @@
-# SPDX-FileCopyrightText: 2026 North Idaho Labs, LLC
-# SPDX-License-Identifier: AGPL-3.0-or-later
+# SPDX-FileCopyrightText: 2026 Jim Coleman / North Idaho Labs, LLC
+# SPDX-License-Identifier: Apache-2.0
 """Edge cases run in-process: number parsing, skips, ExifTool failures, output.
 
 ExifTool is never run here. subprocess.run and shutil.which are replaced, so
