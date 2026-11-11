@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-# SPDX-FileCopyrightText: 2026 North Idaho Labs, LLC
-# SPDX-License-Identifier: AGPL-3.0-or-later
+# SPDX-FileCopyrightText: 2026 Jim Coleman / North Idaho Labs, LLC
+# SPDX-License-Identifier: Apache-2.0
 """Write an OpenDroneMap geo.txt from DJI mapping photos.
 
 Height is the takeoff ground height you pass plus RelativeAltitude.
